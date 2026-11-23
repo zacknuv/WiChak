@@ -1,10 +1,16 @@
 import java.util.ArrayList;
 
 public class UserBoard {
-    private ArrayList<User> users;
+    private static final UserBoard INSTANCE = new UserBoard();
 
-    public UserBoard() {
+    private final ArrayList<User> users;
+
+    private UserBoard() {
         this.users = new ArrayList<User>();
+    }
+
+    public static UserBoard getInstance() {
+        return INSTANCE;
     }
 
     public void addUser(User user) {

@@ -1,6 +1,7 @@
 public class MessageTree {
+
     private MessageNode root;
-    private int         size;
+    private int size;
 
     public MessageTree() {
         this.root = null;
@@ -40,7 +41,7 @@ public class MessageTree {
 
     public Message[] toArray() {
         Message[] result = new Message[size];
-        fillInOrder(root, result, new int[]{0});
+        fillInOrder(root, result, new int[] { 0 });
         return result;
     }
 
@@ -51,6 +52,11 @@ public class MessageTree {
         fillInOrder(node.getLeft(), result, index);
         result[index[0]++] = node.getData();
         fillInOrder(node.getRight(), result, index);
+    }
+
+    public void clear() {
+        root = null;
+        size = 0;
     }
 
     public int getNodeCount() {
