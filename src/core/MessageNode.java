@@ -1,3 +1,5 @@
+package core;
+
 public class MessageNode {
     private Message     data;
     private MessageNode left;

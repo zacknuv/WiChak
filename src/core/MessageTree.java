@@ -1,11 +1,18 @@
+package core;
+
 public class MessageTree {
+    private static final MessageTree INSTANCE = new MessageTree();
 
     private MessageNode root;
-    private int size;
+    private int         size;
 
-    public MessageTree() {
+    private MessageTree() {
         this.root = null;
         this.size = 0;
+    }
+
+    public static MessageTree getInstance() {
+        return INSTANCE;
     }
 
     public void insert(Message message) {

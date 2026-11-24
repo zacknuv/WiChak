@@ -1,3 +1,5 @@
+package core;
+
 public class Message {
     private String writer;
     private String content;
